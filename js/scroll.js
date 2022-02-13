@@ -1,3 +1,4 @@
+//Eases web page to the top of an element using an easing function
 export default function smoothScroll(target, duration){
     var target = document.querySelector(target);
     var targetPos = target.offsetTop;

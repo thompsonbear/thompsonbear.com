@@ -14,8 +14,7 @@
 
 .headshot-image{
     margin: 20px;
-    width: 250px;
-    border-radius: 8px;
+    width: 280px;
     filter: grayscale(100%);
     transition: filter 0.5s;
 }
@@ -84,20 +83,23 @@
 }
 
 @media only screen and (max-width: 700px){
+    #headshot-link-container{
+        flex-direction: column;
+    }
+    
+    #home-links{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
     .headshot-image{
-        width: 40vw;
+        width: 50vw;
+        padding-bottom: 50px;
     }
 
-    .home-link{
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    .home-link svg{
-        width: 20px;
-    }
 
     #definition-text-box{
-        font-size: 3vw;
+        display: none;
     }
 }

@@ -1,0 +1,47 @@
+@import url(resume.css);
+@import url(home.css);
+@import url(nav.css);
+@import url(contact.css);
+@import url(footer.css);
+
+:root{
+    --box-shadow-button: 0px 0px 12px -5px #626262;
+    --box-shadow-panel: 6px 6px 25px -5px #626262;
+    --color-white: rgba(255, 255, 255, 1);
+    --color-offwhite: rgba(248, 248, 248, 1);
+    --color-black: #000000;
+    --color-gray: #616161;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-offwhite);
+}
+
+#main-container{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 1500px;
+}
+
+section{
+    width: 100%;
+}
+
+@keyframes arrow-jump{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(10px);}
+    100%{transform: translateY(0);}
+}

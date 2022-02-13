@@ -1,0 +1,186 @@
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact h1{
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.contact-card{
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-left{
+    border-radius: 8px;
+    background: var(--color-white);
+    margin: 50px;
+    height: 495px;
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow-button);
+}
+
+.contact-link{
+    width: fit-content;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-link svg{
+    width: 16px;
+    margin-right: 5px;
+}
+
+.contact-link span{
+    width: 0%;
+    background: black;
+    height: 2px;
+    transition: width 0.5s;
+}
+
+.contact-link:hover span{
+    width: 100%;
+}
+
+.contact-text{
+    display: flex;
+    align-items: center;
+}
+
+#contact-right{
+    margin: 50px;
+}
+
+#contact-right label{
+    font-size: 18px;
+}
+
+#contact-right input{
+    width: 80vw;
+    font-size: 22px;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+    max-width: 450px;
+    background: var(--color-offwhite);
+}
+
+#contact-right input:focus{
+    outline: none;
+    border-bottom: 2px solid rgba(0,0,0,1);
+}
+
+#contact-right input:valid{
+    outline: none;
+    color: black;
+}
+
+#contact-right textarea{
+    margin-top: 10px;
+    padding-left: 10px;
+    resize: none;
+    font-size: 22px;
+    border: none;
+    border-left: 2px solid rgba(0,0,0,0.5);
+    width: 80vw;
+    max-width: 450px;
+    height: 150px;
+    background: var(--color-offwhite);
+}
+
+#contact-right textarea:focus{
+    outline: none;
+    border-left: 2px solid black;
+}
+
+#contact-right textarea:valid{
+    outline: none;
+    color: black;
+}
+
+#contact-send-button{
+    border: none;
+    background: transparent;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-button);
+    font-size: 22px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    background: var(--color-white);
+}
+
+#contact-send-button svg{
+    transition: transform 0.8s;
+    margin-left: 10px;
+    width: 26px;
+}
+
+#contact-send-button:hover{
+    opacity: 1;
+}
+
+#contact-send-button:hover svg{
+    transform: translateX(5px);
+}
+
+@media only screen and (max-width: 900px){
+    .contact-card{
+        flex-direction: column-reverse;
+        box-shadow: none;
+    }
+    #contact h1{
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    #contact-right{
+        margin: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    #contact-right label{
+        font-size: 16px;
+    }
+
+    #contact-right input{
+        font-size: 16px;
+    }
+
+    #contact-right textarea{
+        font-size: 16px;
+    }
+
+    #contact-send-button{
+        width: 100%;
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    #contact-send-button svg{
+        width: 3vw;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #contact-left{
+        min-width: 80%;
+    }
+}

@@ -1,0 +1,122 @@
+nav{
+    z-index: 10;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, var(--color-offwhite) 0%, var(--color-offwhite) 65%, rgba(255,255,255,0) 100%);
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+nav li{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    margin: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+nav li svg{
+    display: none;
+    width: 24px;
+}
+
+nav li span{
+    width: 0%;
+    background: var(--color-black);
+    height: 2px;
+    transition: width 0.5s;
+}
+
+nav li:hover span{
+    width: 100%;
+}
+
+#burger{
+    margin-right: 50px;
+    width: 35px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+#burger span{
+    background: black;
+    height: 3px;
+    transition: all 0.5s;
+}
+
+#burger span:first-child{
+    width: 100%
+}
+
+#burger span:nth-child(2){
+    width: 80%
+}
+
+#burger span:last-child{
+    width: 50%
+}
+
+#burger:hover span{
+    width: 100%;
+}
+
+@media only screen and (max-width: 700px){
+    nav ul{
+        display: none;
+    }
+
+    .nav-opening{
+        display: flex;
+        opacity: 0;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        background: rgba(255,255,255,0.8);
+        backdrop-filter: blur(5px);
+        height: 100vh;
+        width: 100vw;
+        transition: opacity 1s;
+    }
+
+    .nav-open{
+        opacity: 1;
+    }
+
+    .nav-closing{ 
+        opacity: 0;
+    }
+
+    nav li svg{
+        display: inline-block;
+    }
+
+    #burger{
+        display: flex;
+    }
+}

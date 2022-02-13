@@ -1,0 +1,307 @@
+#resume{
+    padding-top: 100px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#resume h1{
+    transform: translateY(-12px);
+    color: var(--color-black);
+    font-weight: 400;
+    font-size: 26px;
+}
+
+#resume h2{
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--color-black);
+}
+
+#resume h3{
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+#resume h5{
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+#resume p{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.resume-content-container{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-left: 3px solid black;
+    border-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)) 1;
+    margin-bottom: 70px;
+}
+
+.resume-card{
+    box-shadow: var(--box-shadow-button);
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.resume-card:hover{
+    border: 2px solid var(--color-gray);
+}
+
+.resume-section-subtitle{
+    margin-bottom: 16px;
+}
+
+.resume-exp-card{
+    border: none;
+    background: var(--color-white);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas: 
+        "title dates"
+        "list ."
+        "link logo";
+    margin-top: 10px;
+    width: 100%;
+    max-height: 84px;
+    padding: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: max-height 1s ease, border 0.35s ease;
+    border: 2px solid transparent;
+}
+
+.resume-exp-card:focus{
+    max-height: 300px;
+}
+
+.resume-exp-card ul{
+    grid-area: list;
+    text-align: left;
+    margin: 20px;
+}
+
+.resume-exp-card li{
+    font-size: 16px;
+}
+
+.resume-exp-card a{
+    grid-area: link;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    margin-top: 20px;
+    color: var(--color-black);
+}
+
+.resume-exp-card a:hover{
+    text-decoration: underline;
+}
+
+.resume-exp-card a svg{
+    margin: 2px;
+}
+
+.resume-exp-title{
+    grid-area: title;
+    text-align: left;
+}
+
+.resume-exp-date{
+    grid-area: dates;
+    text-align: right;
+}
+
+.resume-exp-logo{
+    grid-area: logo;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    opacity: 0.8;
+}
+
+.resume-exp-logo img{
+    height: 50px;
+}
+
+.resume-edu-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.resume-edu-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    background: var(--color-white);
+    width: 340px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: border 0.35s ease;
+}
+
+.resume-edu-card p{
+    color: var(--color-black);
+}
+
+.resume-edu-card img{
+    height: 40px;
+    filter: grayscale(100%) brightness(0);
+}
+
+.resume-edu-grad-container{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-edu-grad-container svg{
+    height: 22px;
+    margin: 2px;
+}
+
+.resume-edu-grad-container h2{
+    margin: 5px;
+}
+
+.resume-edu-text{
+    display: grid;
+    place-items: center;
+}
+
+.resume-cert-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.resume-cert-card{
+    width: 200px;
+    height: 200px;
+    padding: 12px;
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: border 0.35s ease;
+}
+
+.resume-cert-card-logo img{
+    height: 30px;
+}
+
+@media only screen and (max-width: 1200px){
+    .resume-content-container{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .resume-cert-card-container{
+        justify-content: center;
+    }
+
+    .resume-edu-card-container{
+        justify-content: center;
+    }
+
+    .resume-exp-card:focus{
+        max-height: 400px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .resume-exp-card{
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content min-content min-content min-content;
+        grid-template-areas: 
+            "title"
+            "dates"
+            "list"
+            "logo"
+            "link";
+        max-height: 110px;
+    }
+
+    .resume-exp-card:focus{
+        max-height: 500px;
+    }
+
+    .resume-exp-date{
+        text-align: left;
+    }
+
+    .resume-exp-logo{
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+
+}
+
+@media only screen and (max-width: 480px){
+    #resume h1{
+        font-size: 22px;
+    }
+    
+    #resume h2{
+        font-size: 18px;
+    }
+    
+    #resume h3{
+        font-size: 14px;
+    }
+    
+    #resume h5{
+        font-size: 14px;
+    }
+    
+    #resume p{
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .resume-exp-card{
+        max-height: 100px;
+    }
+
+    .resume-exp-card:focus{
+        max-height: 600px;
+    }
+    
+    .resume-cert-card{
+        width: 100%;
+        height: auto;
+    }
+    .resume-cert-card-logo img{
+        height: 20px;
+    }
+}
+
+
+
+
+
+
+

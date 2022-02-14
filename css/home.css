@@ -11,8 +11,8 @@
     align-items: center;
 }
 
-
 .headshot-image{
+    border-radius: 8px;
     margin: 20px;
     width: 280px;
     filter: grayscale(100%);
@@ -97,7 +97,6 @@
         width: 50vw;
         padding-bottom: 50px;
     }
-
 
     #definition-text-box{
         display: none;

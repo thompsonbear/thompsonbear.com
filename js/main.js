@@ -32,7 +32,7 @@ function clearButtonOpacity(){
 }
 
 //Sets nav button of the currently active section to have 100% opacity
-//Order is important here where the top most section needs to be the last else if due to how isInViewport() is calculated
+//Order is important here where the top most section needs to be the last due to how isInViewport() is calculated
 function updateActiveSection(){
   if (isInViewport(contactSection)){
     clearButtonOpacity();
